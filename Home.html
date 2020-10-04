@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+  <title>Paris, Texas (1984)</title>
+  <meta charset="utf-8">
+<style>
+body  {
+  background-image: url(https://thumbs.gfycat.com/JoyousFondAmethystsunbird-size_restricted.gif);
+  background-size: cover;
+
+  text-align: center;
+  color: white;
+
+
+}
+
+.content{
+  width: 100vw;
+  perspective: 100px;
+  perspective-origin: left;
+
+}
+drag{
+  position:relative;
+  cursor:hand;
+  z-index:100;
+}
+
+.playpause {
+    background-image:url(https://i.ibb.co/R0wMPrL/play-Pause-Button.png);
+    width:50%;
+    height:50%;
+    position:absolute;
+    left:0%;
+    right:0%;
+    top:0%;
+    bottom:0%;
+    margin:auto;
+    background-size:contain;
+    background-position: center;
+}
+
+
+.wrapper{
+    display:table;
+    width:auto;
+    position:relative;
+    width:50%;
+
+
+paragraph1 {
+  top: 10%;
+  left: 40%;
+}
+
+.box{
+  width: 100vw;
+height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1000px 1fr;
+}
+
+</style>
+<script>
+  var dragobject={
+z: 0, x: 0, y: 0, offsetx : null, offsety : null, targetobj : null, dragapproved : 0,
+initialize:function(){
+document.onmousedown=this.drag
+document.onmouseup=function(){this.dragapproved=0}
+},
+drag:function(e){
+var evtobj=window.event? window.event : e
+this.targetobj=window.event? event.srcElement : e.target
+if (this.targetobj.className=="drag"){
+this.dragapproved=1
+if (isNaN(parseInt(this.targetobj.style.left))){this.targetobj.style.left=0}
+if (isNaN(parseInt(this.targetobj.style.top))){this.targetobj.style.top=0}
+this.offsetx=parseInt(this.targetobj.style.left)
+this.offsety=parseInt(this.targetobj.style.top)
+this.x=evtobj.clientX
+this.y=evtobj.clientY
+if (evtobj.preventDefault)
+evtobj.preventDefault()
+document.onmousemove=dragobject.moveit
+}
+},
+moveit:function(e){
+var evtobj=window.event? window.event : e
+if (this.dragapproved==1){
+this.targetobj.style.left=this.offsetx+evtobj.clientX-this.x+"px"
+this.targetobj.style.top=this.offsety+evtobj.clientY-this.y+"px"
+return false
+}
+}
+}
+
+dragobject.initialize()
+
+</script>
+  </head>
+<body>
+<div class="content">
+  <div>
+<img src="https://i.ibb.co/YLRVFxF/Sign1.png" class="drag">
+
+    <button onclick="playPause() ">Walt: “There’s nothin’ out there... <br> Don’t you trust me...” </button>
+    <p style="color:white;">만약 Walt의 말을 기억하거나 믿는다면 버튼을 한 번 눌러 보아도 좋다.</p>
+  <video  id="video1" loop width="1280" height="920">
+    <source src="StreetView.mp4" type="video/mp4">
+</video>
+</div>
+
+<script>
+  var myVideo = document.getElementById("video1");
+
+  function playPause() {
+    if (myVideo.paused)
+      myVideo.play();
+    else
+      myVideo.pause();
+  }
+
+
+</script>
+<div class="paragraph1">
+  <p style="font-size:50px; color:white; fold-weight:bold;">나는 로드 무비를 싫어한다. 신도시 아파트가 나와 내 가족을 그렇게 만들었다. Mojave 사막에서 나는 어디로 진전하지도 못하고 계속 같은 자리를 맴돌 수밖에 없다. 그 이유로서는 내가 운전 면허 소지자가 아니기 때문이다. 방향 감각의 미숙함은 영화가 나오는 스크린을 보고 있는 눈에게 상당히 큰 영향을 미친다. Travis는 길을 잘못 들었지만 끝내 스스로 떠날 수 있는 자였는데, 그의 방향 감각은 몸을 지배하고 있어 더이상 검증의 대상조차 아니기 때문이다.</p>
+</div>
+
+<img src="https://fsgworkinprogress.com/wp-content/uploads/2012/05/Unknown-3.jpeg" width="900" height="700" class="drag">
+<img src="https://i.ibb.co/N6G2WrC/2020-10-04-3-23-40.png" width="500" height="400">
+<br><p style="color:white;">이것은 Idaho에 있는 도시 Paris의 푯말이다. (사진 출처: https://fsgworkinprogress.com)</p>
+<br><br><br><br><p style="color:white; font-size:50px;">텍사스의 명물은 푸른 하늘이다.
+  <img src="Sky.gif" width="120" height="70">
+    <img src="Sky.gif" width="320" height="200">
+    2006년의 나는 텍사스 하늘을 흉내낸 벽지가 시공된 방을 가지고 있었다.
+    <img src="https://t1.daumcdn.net/cfile/blog/130C8D254B643C0187?original" width="800" height="300">
+    이것은 일면식도 없는 이의 시공 사례에서 발견한 정확한 시각의 당시 나의 방이다.</p>
+    <p style="color:white; font-size:20px;">(출처: '도배사 웅탱이'님의 다음 블로그, http://blog.daum.net/uuung73)</p>
+    <p style="color:white; font-size:50px;">나는 아직도 그 벽지와 타일과 몰딩 카탈로그 앨범을 기억한다. 그것을 훑어 보는 우리 부모님의 비전은 다음 중 하나였던 것 같다.</p>
+
+  <div class="box">
+        <div>
+        <img src="http://www.homentones.com/data/base/goods/big/thumbnail_11_%EA%B0%80%EC%A1%B1%EC%9D%84%EC%B0%BE%EC%95%84%EC%84%9C.jpg" width="400">
+        <p style="color:white;">ⓐ (출처: "Disney 굿다이노 가족을찾아서 천연펄프 벽지", 홈앤톤즈 제공)</p>
+        </div>
+
+        <div>
+        <img src="http://niart.kr/web/product/small/201708/10297_shop1_285423.jpg"  width="550">
+        <p style="color:white;">ⓑ (출처: "포토벽지-17PH244 시공 Timespace 하늘 천장 (by Skitterphoto)", 내추럴이미지 제공)</p>
+        </div>
+  </div>
+
+    <br><br><br><br><p style="color:white; font-size:50px;">내 초등생 시절 기억은 말이지, 무섭게 사적 영역을 침범하는 어리숙한 어른들에 대한 조각으로 연명하고 있는데, 팔촌 당숙의 고모의 누나의 딸이라던 어느 '고모'는 한 번 하늘을 보자고 말하더니 흰색인데 앤티크 양식을 보여 주고 있는 침대 프레임 위에 벌러덩 누웠다. 분명히 나는 문을 잠그고 방 안에 스스로 격리되어 있었다. 고모는 봉투에 담긴 만 원을 용돈으로 두고 가시었다.
+  <video id="video2" autoplay width="500" height="400">
+      <source src="plafondloading.mp4" type="video/mp4">
+          <p style="color:white; font-size:15px; display:inline;">이것은 벽지가 뜯겨 나간 현재 나의 방이다. (영화인지 의심스러운 것은 오른쪽으로 클릭해서 컨트롤러를 틀어 보라.) </p>
+
+<br></br> <p style="color:white; font-size: 50px;"> 이제 어디든지 갈 수 있는 나는 텍사스 내 파리를 갑작스레 일으켜 세워진 땅덩이처럼 보기 시작한 것이다. </p>
+<img src="https://i.ibb.co/JqzWqfm/2020-10-03-2-00-07.jpg" width="1600">
+억지로 원근법을 부정하는 세계.
+<img src="https://i.ibb.co/SxBq5NX/2020-10-03-2-01-17.jpg">
+</div>
+</div>
+  </body>
+</html>
